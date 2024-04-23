@@ -26,6 +26,24 @@
 </head>
 
 <body>
+    <div>
+        <label for="player1">Player 1 (X):</label>
+        <select id="player1">
+            <option value="human">Human</option>
+            <option value="computerRandom">Computer (Random)</option>
+            <option value="computerMinimax">Computer (Minimax)</option>
+        </select>
+    </div>
+    <div>
+        <label for="player2">Player 2 (O):</label>
+        <select id="player2">
+            <option value="human">Human</option>
+            <option value="computerRandom">Computer (Random)</option>
+            <option value="computerMinimax">Computer (Minimax)</option>
+        </select>
+    </div>
+    <button onclick="startGame()">Start Game</button>
+    
     <div class="board">
         <div class="cell" id="cell0" onclick="makeMove(this)"></div>
         <div class="cell" id="cell1" onclick="makeMove(this)"></div>
@@ -38,12 +56,6 @@
         <div class="cell" id="cell8" onclick="makeMove(this)"></div>
 
         <button onclick="resetGame()">Reset Game</button>
-
-        <div style="margin-left: 20px;">
-            <label for="aiMode">AI Difficulty:</label>
-            <input type="range" id="aiMode" min="0" max="1" step="1" value="0">
-            <span id="aiModeLabel">Random</span>
-        </div>
 
     </div>
 
